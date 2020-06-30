@@ -5,8 +5,7 @@
 /.pnp
 .pnp.js
 firebase.js
-auth.js
-protected.route.js
+
 # testing
 /coverage
 
