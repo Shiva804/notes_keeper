@@ -10,10 +10,15 @@ export const ProtectedRoute = ({
     <Route
       {...rest}
       render={props => {
-        if (auth.isAuthenticated()) {
+        if (localStorage.getItem('as')) {
+         
           return <Component {...props} />;
-        } else {
+        } 
+     
+        else {
+          
           return (
+
             <Redirect
               to={{
                 pathname: "/",

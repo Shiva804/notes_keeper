@@ -75,9 +75,17 @@ class SignUpComponent extends React.Component
                        this.props.history.push('/')
                    },dbError => {
                        this.setState({signUpError:'Failed to add User'})
+                       setTimeout(()=>{
+                        window.location.reload(false)
+    
+                    },1000)
                    })
                 },authError => {
-                    this.setState({signUpError:'Failed to add User'})
+                    this.setState({signUpError:'Email or password is Invalid..'})
+                    setTimeout(()=>{
+                        window.location.reload(false)
+    
+                    },1000)
                    })
                
                
@@ -90,9 +98,9 @@ class SignUpComponent extends React.Component
                     <h2>Sign Up!</h2>
                     <form onSubmit={(e)=> this.submitSignUp(e)} id='signUp'>
                         
-                        <input type='email'  onChange={(e) => this.userTyping('email',e)} id='email' placeholder='Enter Your Email...' /><br /><br />
+                        <input type='email'  onChange={(e) => this.userTyping('email',e)} id='email' placeholder='Enter a valid Email...' /><br /><br />
                         
-                        <input type='password' id='password' onChange={(e) => this.userTyping('password',e)} placeholder='Enter Your Password...' /><br /><br />
+                        <input type='password' id='password' onChange={(e) => this.userTyping('password',e)} placeholder='Enter your password..' /><br /><br />
 
                         <input type='password'onChange={(e) => this.userTyping('confirm_password',e)} id='confirm_password' placeholder='Confirm Password... ' /><br /><br />
                         <div id='sbtn'><Link to='/' style={{ textDecoration: 'none', color:'#0067B8', fontSize:'15px'}}>Already have an account?</Link><button id='sign'>Sign Up</button></div>

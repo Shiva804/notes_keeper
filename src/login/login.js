@@ -7,9 +7,9 @@ const firebase = require('firebase')
 
 class LoginComponent extends React.Component
 {
-    constructor()
+    constructor(props)
     {
-        super()
+        super(props)
         this.state = {
             email:null,
             password:null,
@@ -52,6 +52,11 @@ class LoginComponent extends React.Component
                  })
              }, err => {
                  this.setState({loginError : 'Invalid Credentials!'})
+                
+                 setTimeout(()=>{
+                     window.location.reload(false)
+
+                 },1000)
              })
         }
          
@@ -64,8 +69,8 @@ class LoginComponent extends React.Component
                     <br />
                     <br />
                     <form onSubmit = {e => this.submitLogin(e)}>
-                        <input type='email'  id='email' placeholder='Enter your email...' onChange={e => this.userTyping('email',e)} /><br /><br/><br />
-                        <input type='password' id='password' placeholder='Enter your password...' onChange={e => this.userTyping('password',e)} /><br /><br />
+                        <input type='email'  id='email1' placeholder='Enter your email...' onChange={e => this.userTyping('email',e)} /><br /><br/><br />
+                        <input type='password' id='password1' placeholder='Enter your password...' onChange={e => this.userTyping('password',e)} /><br /><br />
                          {this.state.loginError?
                           
                             <h4>{this.state.loginError}</h4>

@@ -39,6 +39,7 @@ h2{
     font-size: 30px;
     font-family: 'Amiri', serif;
     color:#4d4a4a;
+    margin-top: 20px;
 }
 
 #email
@@ -49,6 +50,7 @@ h2{
     outline: none;
     border-bottom: rgb(56, 55, 55) 1px solid;
     line-height: 20px;
+    margin-top: 70px;
 }
 #password
 {
