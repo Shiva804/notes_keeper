@@ -60,17 +60,19 @@ class SignUpComponent extends React.Component
                .auth()
                .createUserWithEmailAndPassword(this.state.email,this.state.password)
                .then(authRes =>{
-                   const userObj = {
-                       email: authRes.user.email,
-                       title:[],
-                       notes:[]
+                   const notes = {
+                    //    email: authRes.user.email
+                    title:null,
+                    body:null
 
                    }
                    firebase
                    .firestore()
                    .collection('users')
                    .doc(this.state.email)
-                   .set(userObj)
+                   .collection('notes')
+                   .doc()
+                   .set(notes)
                    .then(()=>{
                        this.props.history.push('/')
                    },dbError => {
