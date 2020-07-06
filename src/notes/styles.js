@@ -5,21 +5,56 @@ const useStyles = makeStyles({
     root :{
         minWidth:160,
         maxWidth:300,
-        spacing:20,
-        maxHeight:300,
+        minHeight:'10px',
+        maxHeight:'fitcontent',
         marginRight:30,
         marginTop:40,
-        overflowY:'scroll'
         
     },
-    content:
+   content:
+   {
+       minHeight:'fitcontent',
+       maxHeight:'300px',
+       overflowY:'scroll'
+
+   },
+
+
+
+    Typography:
     {
-        fontSize:20
+        fontSize:'20px'
     },
-    title:
+
+    fab:
     {
-        fontWeight:'bolder'
-    }
+
+   fontSize:'small',
+   position:'absolute'
+
+        
+     },
+   title:
+   {
+       position:'sticky',
+       
+   },
+
+   del:
+   {
+   
+       position:'absolute'
+   },
+
+   action:
+   {
+       position:'sticky',
+       minHeight:'60px',
+       maxHeight:'50px'
+
+   }
+ 
+
 
 
 })

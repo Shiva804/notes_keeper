@@ -24,6 +24,7 @@ class LoginComponent extends React.Component
             switch (type) {
                 case 'email':
                     this.setState({email: e.target.value})
+                    
                     break;
                  case 'password':
                     this.setState({password: e.target.value})
@@ -41,10 +42,12 @@ class LoginComponent extends React.Component
         this.submitLogin = async e =>
         {
              e.preventDefault()
+             localStorage.setItem('email',this.state.email)
              firebase
              .auth()
              .signInWithEmailAndPassword(this.state.email,this.state.password)
              .then(() => {
+                
 
                 auth.login(() => {
                     this.props.history.push("/dashboard");
@@ -80,7 +83,7 @@ class LoginComponent extends React.Component
                          :
                         null}
                         <p>Don't have an account ?</p>
-                       <div id='sbn'><Link to='/signup' style={{ textDecoration: 'none', color:'#0067B8', fontSize:'19px'}}>Create account!</Link> <button type='submit' id='log'> Login </button></div>
+                       <div id='sbn'><Link to='/signup' style={{ textDecoration: 'none', color:'#0067B8', fontSize:'19px'}}>Create account!</Link> <button type='submit' id='log' > Login </button></div>
                
                     
 

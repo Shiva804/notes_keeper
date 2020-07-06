@@ -11,6 +11,7 @@ class SignUpComponent extends React.Component
                 email:null,
                 password:null,
                 confirm_password:null,
+                name:'',
                 signUpError:''
             }
         }
@@ -35,10 +36,11 @@ class SignUpComponent extends React.Component
                 case 'confirm_password':
                    this.setState({confirm_password: e.target.value})
                    break;
+                case 'name':
+                    this.setState({name: e.target.value})
+                   break;
                    
-                
-                   
-                   
+        
            
                default:
                    break;
@@ -56,43 +58,43 @@ class SignUpComponent extends React.Component
            }
            else
            {
+               const name = {
+                   email:this.state.email,
+                   name:this.state.name
+               }
+            
+
                firebase
                .auth()
                .createUserWithEmailAndPassword(this.state.email,this.state.password)
-               .then(authRes =>{
-                   const notes = {
-                    //    email: authRes.user.email
-                    title:null,
-                    body:null
+               .then(() => {
+                
+                firebase
+                .firestore()
+                .collection('names')
+                .add(name)
 
-                   }
-                   firebase
-                   .firestore()
-                   .collection('users')
-                   .doc(this.state.email)
-                   .collection('notes')
-                   .doc()
-                   .set(notes)
-                   .then(()=>{
-                       this.props.history.push('/')
-                   },dbError => {
-                       this.setState({signUpError:'Failed to add User'})
-                       setTimeout(()=>{
-                        window.location.reload(false)
-    
-                    },1000)
-                   })
-                },authError => {
-                    this.setState({signUpError:'Email or password is Invalid..'})
-                    setTimeout(()=>{
-                        window.location.reload(false)
-    
-                    },1000)
-                   })
+
+                      
+                this.props.history.push('/')
+            },dbError => {
+                this.setState({signUpError:'Failed to add User'})
+                setTimeout(()=>{
+                 window.location.reload(false)
+
+             },1000)
+            }
+            ,authError => {
+             this.setState({signUpError:'Email or password is Invalid..'})
+             setTimeout(()=>{
+                 window.location.reload(false)
+
+             },1000)
+            })
+            
                
-               
-           }
-       } 
+           
+       } }
         return(
             <div className='container'>
                 <h1 id='nk'>Notes Keeper</h1>
@@ -100,6 +102,7 @@ class SignUpComponent extends React.Component
                     <h2>Sign Up!</h2>
                     <form onSubmit={(e)=> this.submitSignUp(e)} id='signUp'>
                         
+                        <input type='text'  onChange={(e) => this.userTyping('name',e)} id='name' placeholder='Enter Your Name..' /><br /><br />
                         <input type='email'  onChange={(e) => this.userTyping('email',e)} id='email' placeholder='Enter a valid Email...' /><br /><br />
                         
                         <input type='password' id='password' onChange={(e) => this.userTyping('password',e)} placeholder='Enter your password..' /><br /><br />

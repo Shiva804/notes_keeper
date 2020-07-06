@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
 *
 {
     margin:0;
@@ -29,6 +29,7 @@
     height:100px;
     display: flex;
     justify-content: space-between;
+    
 }
 
 #logout
@@ -38,12 +39,15 @@
     outline: none;
     font-size: 16px;
     border: none;
-    margin-left: 100px;
+    margin-left: 50px;
     width:120px;
     border-radius: 20px;
     height: 40px;
     margin-top: 20px;
     margin-right: 50px;
+    float: right;
+
+    
 }
 #logout:hover
 {
@@ -84,6 +88,7 @@ h3{
 resize: none;
 height: 150px;
 width: 400px;
+padding-left: 20px;
 display: inline-block;
 border:2px solid black;
 border-top:0px;
@@ -91,6 +96,10 @@ font-size: 20px;
 outline: none;
 border-bottom-left-radius: 23px;
 border-bottom-right-radius: 23px;
+border-top-left-radius: 23px;
+border-top-right-radius: 23px;
+
+
 
 
 }
@@ -122,3 +131,17 @@ border-bottom-right-radius: 23px;
     
   
 } 
+
+#namess{
+    font-size: 30px;
+    color:'black';
+    font-family: 'Cinzel', serif;
+    
+    
+}
+
+#nn
+{
+    display: flex;
+    
+}

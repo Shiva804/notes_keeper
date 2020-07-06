@@ -50,7 +50,7 @@ h2{
     outline: none;
     border-bottom: rgb(56, 55, 55) 1px solid;
     line-height: 20px;
-    margin-top: 70px;
+    
 }
 #password
 {
@@ -70,6 +70,17 @@ h2{
     font-size: 20px;
     outline: none;
     border-bottom: rgb(56, 55, 55) 1px solid;
+    
+}
+#name
+{
+    line-height: 20px;
+    border: none;
+    width:80%;
+    font-size: 20px;
+    outline: none;
+    border-bottom: rgb(56, 55, 55) 1px solid;
+    margin-top: 70px;
     
 }
 
