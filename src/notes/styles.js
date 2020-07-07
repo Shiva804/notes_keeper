@@ -19,7 +19,9 @@ const useStyles = makeStyles({
    {
        minHeight:'fitcontent',
        maxHeight:'300px',
-       overflowY:'scroll',
+       overflowY:'hidden',
+       overflowX:'hidden',
+       
        
 
    },

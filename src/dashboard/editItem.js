@@ -6,6 +6,7 @@ import Fade from '@material-ui/core/Fade';
 import SaveIcon from '@material-ui/icons/Save';
 import Button from '@material-ui/core/Button';
 
+
 const useStyles = (theme) => ({
     modal: {
       display: 'flex',
@@ -39,7 +40,9 @@ const useStyles = (theme) => ({
     {
         
         resize: 'none',
-        height: '150px',
+        minHeight:'180px',
+        maxHeight: '300px',
+        overflowY:'scroll',
         width: '400px',
         paddingLeft: '20px',
         display: 'inline-block',

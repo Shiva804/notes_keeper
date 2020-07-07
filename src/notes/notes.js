@@ -8,7 +8,6 @@ import CardHeader from '@material-ui/core/CardHeader';
 import Fab from '@material-ui/core/Fab';
 import DeleteOutlineRoundedIcon from '@material-ui/icons/DeleteOutlineRounded';
 import CardActions from '@material-ui/core/CardActions';
-import EditIcon from '@material-ui/icons/Edit';
 
 function Note(props)
  {
