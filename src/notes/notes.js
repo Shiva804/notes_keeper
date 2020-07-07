@@ -8,6 +8,7 @@ import CardHeader from '@material-ui/core/CardHeader';
 import Fab from '@material-ui/core/Fab';
 import DeleteOutlineRoundedIcon from '@material-ui/icons/DeleteOutlineRounded';
 import CardActions from '@material-ui/core/CardActions';
+import EditIcon from '@material-ui/icons/Edit';
 
 function Note(props)
  {
@@ -20,12 +21,17 @@ function Note(props)
              props.deleteItem(props.id)
          }
          
+
+         const editCard = () =>
+         {
+             props.editItem(props.id,props.title,props.content)
+         }
         
         return(
             
         <div id={props.id}>
 
-        <Card className={classes.root} variant='outlined' >
+        <Card className={classes.root} variant='outlined'  onClick={editCard}>
           <CardHeader title ={props.title} className={classes.title}/>
           <Divider />
             <CardContent className={classes.content}>
@@ -36,10 +42,12 @@ function Note(props)
                 </Typography>
 
             </CardContent>
-           <CardActions disableSpacing className={classes.action}>      
+            <Divider/>
+           <CardActions disableSpacing className={classes.action}>    
+            
 
-            <Fab color='secondary' className={classes.fab} onClick={deleteCard}>  <DeleteOutlineRoundedIcon className={classes.del}/></Fab>
-
+            <Fab color='secondary' className={classes.fab} onClick={deleteCard} size='small'>  <DeleteOutlineRoundedIcon className={classes.del}/></Fab>
+            {/* <Fab color='primary' className={classes.editB} size='small'><EditIcon  className={classes.edit}/></Fab>  */}
            </CardActions>
 
         </Card>

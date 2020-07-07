@@ -12,7 +12,7 @@ import LoginComponent from './login/login'
 import SignUpComponent from './signup/signup'
 import DashboardComponent from './dashboard/dashboard'
 import firebaseConfig from './firebase'
-import Note from './notes/notes'
+
 
 
 

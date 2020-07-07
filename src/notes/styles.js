@@ -29,7 +29,7 @@ const useStyles = makeStyles({
     fab:
     {
 
-   fontSize:'small',
+   
    position:'absolute'
 
         
@@ -43,7 +43,11 @@ const useStyles = makeStyles({
    del:
    {
    
-       position:'absolute'
+       position:'absolute',
+       fontSize:'medium',
+       
+       
+
    },
 
    action:
@@ -52,10 +56,17 @@ const useStyles = makeStyles({
        minHeight:'60px',
        maxHeight:'50px'
 
-   }
- 
-
-
+   },
+   edit:
+   {
+       fontSize:'small'
+   },
+   editB:
+   {
+    position:'absolute',
+    marginLeft:'60px',
+    
+} 
 
 })
 

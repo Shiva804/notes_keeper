@@ -2,7 +2,7 @@ import React from 'react'
 import './dashboard.css'
 import authenticate from '../auth'
 import Note from '../notes/notes'
-
+import EditItem from './editItem'
 const firebase = require('firebase')
 
 
@@ -25,6 +25,7 @@ class DashboardComponent extends React.Component
          content:null,
          title:null,
          id:null,
+         modal:null,
       
 
       //To get the data from the database
@@ -42,9 +43,7 @@ class DashboardComponent extends React.Component
 
     render()
     {
-        console.log(this.state.email)
-        console.log(this.state.name)
-
+ 
       
         this.change = (type,e) =>
          {
@@ -73,7 +72,7 @@ class DashboardComponent extends React.Component
 
         this.contentSubmit = (e)=>
         {
-            if(this.state.content!=='')
+            if(this.state.content!==null)
             {
             this.addContentToFireBase()
 
@@ -148,6 +147,103 @@ class DashboardComponent extends React.Component
  
 
         }
+
+        this.editItem = (id,title,content) => 
+        {
+            
+                this.setState({modal:true})
+                this.setState({id:id})
+                this.setState({title:title})
+                this.setState({content:content})
+
+
+            
+
+        }
+
+        this.closeItem = () =>
+        {
+            this.setState({modal:false})
+            this.setState({id:null})
+            this.setState({title:null})
+            this.setState({content:null})
+
+        }
+
+
+        this.save = (id,title,content) =>
+        {
+            this.state.firebaseGetItems.forEach((i) => {
+
+                if(i.id == id)
+                {
+                   
+                    if(content!==null && title!==null)
+                    {
+                        i.content= content
+                        i.title = title
+                    }
+                    if(content!==null && title===null)
+                    {
+                        i.content = content
+                    }
+                    if(content===null && title!=null)
+                    {
+                        i.title=title
+                    }
+                    
+                }
+            })
+
+            if(content!==null && title!==null)
+            {
+             firebase
+            .firestore()
+            .collection('users')
+            .doc(this.state.email)
+            .collection('notes')
+            .doc(id)
+            .update({
+                title:title,
+                 body:content
+            })
+
+
+            }
+            if(content!==null && title===null)
+            {
+                firebase
+                .firestore()
+                .collection('users')
+                .doc(this.state.email)
+                .collection('notes')
+                .doc(id)
+                .update({
+                    body:content
+                })
+    
+
+            }
+
+            if(content===null && title!=null)
+            {
+                firebase
+                .firestore()
+                .collection('users')
+                .doc(this.state.email)
+                .collection('notes')
+                .doc(id)
+                .update({
+                    title:title
+                })
+
+            }
+  
+
+
+        }
+
+        
     
         
 
@@ -183,16 +279,30 @@ class DashboardComponent extends React.Component
                  this.state.firebaseGetItems.map((note)=>(
                      note.content?
                 
-                     <Note title={note.title} content={note.content} key={note.id} id={note.id} deleteItem = {this.onDelete}/> 
+                     <Note title={note.title} content={note.content} key={note.id} id={note.id} deleteItem = {this.onDelete} editItem ={this.editItem} /> 
                     
                     :
 
                     null
                     
                  ))
-                                
-                 
+           
+
                  }
+                 {
+                           this.state.modal === true?
+                           <EditItem close={this.closeItem} id={this.state.id} title={this.state.title} content={this.state.content} save={this.save}/>
+                           :
+                           null
+                        
+                           
+                 }
+                 
+                     
+                
+
+                 
+          
                  
                 </div>
             </div>
