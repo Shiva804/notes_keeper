@@ -86,7 +86,7 @@ h3{
 }
 #notes {
 resize: none;
-height: 150px;
+min-height: 80px; 
 width: 400px;
 padding-left: 20px;
 display: inline-block;
@@ -94,12 +94,11 @@ border:0.5px solid white;
 border-top:0px;
 font-size: 20px;
 outline: none;
+overflow:'hidden';
 border-bottom-left-radius: 23px;
 border-bottom-right-radius: 23px;
 border-top-left-radius: 23px;
 border-top-right-radius: 23px;
-
-
 
 
 }

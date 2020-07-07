@@ -26,24 +26,24 @@ function Note(props)
          {
              props.editItem(props.id,props.title,props.content)
          }
-        
+     
         return(
             
         <div id={props.id}>
 
-        <Card className={classes.root} variant='outlined'  onClick={editCard}>
-          <CardHeader title ={props.title} className={classes.title}/>
-          <Divider />
-            <CardContent className={classes.content}>
-                
-                <Typography variant="h6" component="h6" className={classes.Typography}>
+        <Card className={classes.root} variant='outlined' color='blue' >
+          <CardHeader title ={props.title} className={classes.title} />
+          {/* <hr className={classes.div}/> */}
+            <CardContent className={classes.content} onClick={editCard}>
+                 
+                <Typography variant="p" component="p" className={classes.Typography}>
                     {props.content}
 
                 </Typography>
 
             </CardContent>
-            <Divider/>
-           <CardActions disableSpacing className={classes.action}>    
+            {/* <hr className={classes.div}/> */}
+           <CardActions disableSpacing className={classes.action} >    
             
 
             <Fab color='secondary' className={classes.fab} onClick={deleteCard} size='small'>  <DeleteOutlineRoundedIcon className={classes.del}/></Fab>

@@ -3,6 +3,7 @@ import './dashboard.css'
 import authenticate from '../auth'
 import Note from '../notes/notes'
 import EditItem from './editItem'
+import { TextareaAutosize } from '@material-ui/core'
 const firebase = require('firebase')
 
 
@@ -72,7 +73,7 @@ class DashboardComponent extends React.Component
 
         this.contentSubmit = (e)=>
         {
-            if(this.state.content!==null)
+            if(this.state.content!==null && this.state.content!=='')
             {
             this.addContentToFireBase()
 
@@ -118,10 +119,14 @@ class DashboardComponent extends React.Component
             },...this.state.firebaseGetItems]})
 
             this.setState({title:null})
+            this.setState({content:null})
+
 
 
         }
+  
 
+        
 
 
         
@@ -266,7 +271,7 @@ class DashboardComponent extends React.Component
                 
                 <input type='text' id='title' name='title'  placeholder='Title:'onChange={e=> this.change('title',e)} /><br />
              
-               <textarea id='notes'  name='content'  placeholder='Enter Your Notes..' onChange={e=> this.change('content',e)}/><br />         
+               <TextareaAutosize id='notes'  name='content'  placeholder='Enter Your Notes..' onChange={e=> this.change('content',e)}/><br />         
                 <button id='add' type='submit' >ADD</button>
                 </form>
                 </div>
@@ -312,6 +317,8 @@ class DashboardComponent extends React.Component
 
 
     componentDidMount = () => {
+       
+        
         firebase.auth().onAuthStateChanged(async _usr => {
             if(!_usr)
             this.props.history.push('/')
