@@ -8,7 +8,9 @@ import CardHeader from '@material-ui/core/CardHeader';
 import Fab from '@material-ui/core/Fab';
 import DeleteOutlineRoundedIcon from '@material-ui/icons/DeleteOutlineRounded';
 import CardActions from '@material-ui/core/CardActions';
-
+import { CardMedia } from '@material-ui/core';
+import Image from 'material-ui-image'
+import logo from './paperclip.png'
 function Note(props)
  {
 
@@ -28,12 +30,17 @@ function Note(props)
      
         return(
             
-        <div id={props.id}>
-
-        <Card className={classes.root} variant='outlined' color='blue' >
-          <CardHeader title ={props.title} className={classes.title} />
-          {/* <hr className={classes.div}/> */}
-            <CardContent className={classes.content} onClick={editCard}>
+        <div id={props.id} className={classes.card}>
+            
+       <img src = {logo} className={classes.logo}/>
+        <Card className={classes.root} variant='outlined' color='blue'  >
+        
+        
+            
+          <CardHeader title ={props.title} className={classes.title} onClick={editCard}/>
+          
+        
+            <CardContent className={classes.content} onClick={editCard} >
                  
                 <Typography variant="p" component="p" className={classes.Typography}>
                     {props.content}
@@ -41,7 +48,7 @@ function Note(props)
                 </Typography>
 
             </CardContent>
-            {/* <hr className={classes.div}/> */}
+         
            <CardActions disableSpacing className={classes.action} >    
             
 

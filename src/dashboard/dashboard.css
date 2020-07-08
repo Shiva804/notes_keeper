@@ -14,8 +14,10 @@
 
 #dashboard
 {
-   
-    background-color:#202124;
+    background-image: url('./pawel-czerwinski-3-bDL0iRcbI-unsplash-1.jpg');
+    background-size: cover;
+  
+ 
     
 }
 
@@ -23,7 +25,9 @@
 {
     width:auto;
     margin-top: 0;
-    background-color: #f5f0f6;
+    background-image: url('./joanna-kosinska-1_CMoFsPfso-unsplash-1.jpg'); 
+    position:sticky;
+    background-size: cover;
     box-shadow: 20px 5px 5px black;
     overflow: hidden;
     height:100px;
@@ -34,10 +38,12 @@
 
 #logout
 {
-    background-color: #0067B8; 
+    background-color: rgb(243, 117, 34); 
     color:white;
     outline: none;
     font-size: 16px;
+    text-shadow: 1px 1px black;
+    box-shadow: black 1px 2px;
     border: none;
     margin-left: 50px;
     width:120px;
@@ -51,13 +57,14 @@
 }
 #logout:hover
 {
-    background-color: #045ca0;
+    background-color: rgb(247, 103, 7);
 }
 
 h3{
     margin-left: 40px;
     margin-top: 25px;
-    color:#323031;
+    color:rgb(255, 255, 255);
+    text-shadow: 2px 2px black;
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
 }
@@ -72,7 +79,8 @@ h3{
 {
     height: 3rem;
     border-radius: 16px;
-    border:white 0.5px solid;
+    border:#eebb2f 0.5px solid;
+    border-bottom: white;
     outline: none;
     padding-left: 10px;
     font-size: 20px;
@@ -81,36 +89,42 @@ h3{
     float: bottom;
     border-bottom-left-radius:0px;
     border-bottom-right-radius:0px;
+    box-shadow: 1px 2px #eebb2f;
+    background-color: #dedede9d;
+    
+    
+
 
 
 }
 #notes {
 resize:none;
-/* min-height: 80px;  */
+
 height: 200px;
 width: 400px;
 padding-left: 20px;
 display: inline-block;
-border:0.5px solid white;
+border:0.5px solid #ecb726;
 border-top:0px;
 font-size: 20px;
 outline: none;
-
 border-bottom-left-radius: 23px;
 border-bottom-right-radius: 23px;
 border-top-left-radius: 23px;
 border-top-right-radius: 23px;
+box-shadow: 1px 2px #eebb2f;
+background-color: #dedede71;
+
+
+
 
 
 }
 
-/* ::placeholder
-{
-    color:black;
-} */
+
 #add
 {
-    background-color: #0067B8; 
+    background-color: #017CFA; 
     color:white;
     outline: none;
     font-size: 16px;
@@ -119,6 +133,11 @@ border-top-right-radius: 23px;
     border-radius: 20px;
     height: 40px;
     margin-top: 20px;
+    box-shadow: black 1px 2px;
+}
+
+#add:hover {
+    background-color: #1575d4;
 }
 
 #content
@@ -128,14 +147,16 @@ border-top-right-radius: 23px;
     margin-left:70px;
     justify-content: flex-start;
     flex-wrap: wrap;
+    margin-top: 100px;
     
   
 } 
 
 #namess{
-    font-size: 30px;
-    color:'black';
+    font-size: 28px;
+    color:#1d82db;
     font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px #073e6e ;
     
     
 }

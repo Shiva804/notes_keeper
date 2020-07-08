@@ -8,19 +8,35 @@ const useStyles = makeStyles({
         minHeight:'10px',
         maxHeight:'fitcontent',
         marginRight:30,
-        marginTop:40,
+        // marginTop:,
         backgroundColor:'#202124',
         color:'white',
-        border:'1px white solid',
-        borderRadius:'23px'
+        border:'5px white solid',
+        borderRadius:'23px',
+        outline:'none'
+       
         
     },
+    card:{
+        transition: 'transform .2s',
+        outline:'none',
+        '&:hover':
+        {
+            transform: 'scale(1.1)',
+            
+        }
+    },
+
    content:
    {
        minHeight:'fitcontent',
        maxHeight:'300px',
        overflowY:'hidden',
        overflowX:'hidden',
+       backgroundColor:'#FFFF88',
+       cursor:'pointer',
+       outline:'none'
+       
        
        
 
@@ -33,7 +49,9 @@ const useStyles = makeStyles({
 
     Typography:
     {
-        fontSize:'14px'
+        fontSize:'17px',
+        color:'black',
+        outline:'none'
     },
 
     fab:
@@ -50,14 +68,18 @@ const useStyles = makeStyles({
    title:
    {
        position:'sticky',
-       fontSize:'14px'
+       fontSize:'14px',
+       backgroundColor:'#FFFF88',
+       color:'black',
+       cursor:'pointer',
+       outline:'none'
        
    },
 
    del:
    {
    
-    //    position:'absolute',
+   
        fontSize:'large',
        
        
@@ -69,6 +91,7 @@ const useStyles = makeStyles({
        position:'sticky',
        minHeight:'60px',
        maxHeight:'50px',
+       backgroundColor:'#FFFF88'
    
    },
    edit:
@@ -80,7 +103,15 @@ const useStyles = makeStyles({
     position:'absolute',
     marginLeft:'60px',
     
-} 
+    } ,
+    logo:
+    {
+        height:'50px',
+        position:'absolute',
+        marginTop:'-17px',
+        zIndex:'1'
+    }
+
 
 })
 

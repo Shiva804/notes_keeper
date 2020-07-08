@@ -253,7 +253,8 @@ class DashboardComponent extends React.Component
         
 
         return(
-            <div id='dashboard' >
+ 
+    <div id='dashboard' >
                
                 <header id='header'>
                 <h3>NOTES KEEPER</h3>

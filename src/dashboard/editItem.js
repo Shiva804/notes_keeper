@@ -5,7 +5,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import SaveIcon from '@material-ui/icons/Save';
 import Button from '@material-ui/core/Button';
-
+import PaletteIcon from '@material-ui/icons/Palette';
 
 const useStyles = (theme) => ({
     modal: {
@@ -19,7 +19,7 @@ const useStyles = (theme) => ({
       backgroundColor: 'white',
       outline:'none',
       border: '2px solid #000',
-    
+
     
     },
     title:
@@ -32,7 +32,9 @@ const useStyles = (theme) => ({
         borderBottom:'black solid 0.5px',
         borderTopLeftRadius: '23px',
         borderTopRightRadius: '23px',
-        paddingLeft:'15px'
+        paddingLeft:'15px',
+        backgroundColor: '#ffffffb6'
+
         
     
     },
@@ -42,7 +44,6 @@ const useStyles = (theme) => ({
         resize: 'none',
         minHeight:'180px',
         maxHeight: '300px',
-        overflowY:'scroll',
         width: '400px',
         paddingLeft: '20px',
         display: 'inline-block',
@@ -52,6 +53,7 @@ const useStyles = (theme) => ({
         outline: 'none',
         borderBottomLeftRadius: '23px',
         borderBottomRightRadius: '23px',
+        backgroundColor: '#ffffffb6'
        
                 
     

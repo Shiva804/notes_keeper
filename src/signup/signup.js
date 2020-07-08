@@ -51,6 +51,8 @@ class SignUpComponent extends React.Component
        this.submitSignUp = e =>
        {
            e.preventDefault()
+
+           
            if(!this.formValid())
            {
               this.setState({signUpError: 'Password Mismatch!!'})
