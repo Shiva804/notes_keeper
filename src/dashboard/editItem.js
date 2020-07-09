@@ -5,7 +5,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import SaveIcon from '@material-ui/icons/Save';
 import Button from '@material-ui/core/Button';
-import PaletteIcon from '@material-ui/icons/Palette';
+
 
 const useStyles = (theme) => ({
     modal: {

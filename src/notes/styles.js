@@ -8,8 +8,6 @@ const useStyles = makeStyles({
         minHeight:'10px',
         maxHeight:'fitcontent',
         marginRight:30,
-        // marginTop:,
-        backgroundColor:'#202124',
         color:'white',
         border:'5px white solid',
         borderRadius:'23px',
@@ -33,7 +31,6 @@ const useStyles = makeStyles({
        maxHeight:'300px',
        overflowY:'hidden',
        overflowX:'hidden',
-       backgroundColor:'#FFFF88',
        cursor:'pointer',
        outline:'none'
        
@@ -69,7 +66,6 @@ const useStyles = makeStyles({
    {
        position:'sticky',
        fontSize:'14px',
-       backgroundColor:'#FFFF88',
        color:'black',
        cursor:'pointer',
        outline:'none'
@@ -88,29 +84,56 @@ const useStyles = makeStyles({
 
    action:
    {
-       position:'sticky',
+       display:'flex',
        minHeight:'60px',
        maxHeight:'50px',
-       backgroundColor:'#FFFF88'
+    
    
    },
+
+
    edit:
    {
        fontSize:'small'
    },
+
+
    editB:
    {
     position:'absolute',
     marginLeft:'60px',
     
     } ,
+
+
     logo:
     {
         height:'50px',
         position:'absolute',
         marginTop:'-17px',
         zIndex:'1'
+    },
+
+    pal:
+    {
+        marginLeft: '50px',
+    },
+
+    colors:
+    {
+        height:'100px',
+        width:'160px',
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        border:'2px black solid',
+        borderRadius:'23px'
     }
+ 
+
+
+
+
 
 
 })

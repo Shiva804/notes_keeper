@@ -1,0 +1,16 @@
+#col
+{
+    border:2px black solid;
+    border-radius: 50%;
+    height: 30px;
+    width:30px;
+    margin-left: 6px;
+    margin-top: 5px;
+    outline:none;
+
+}
+
+#col:hover 
+{
+    transform: scale(1.1);
+}

@@ -27,13 +27,15 @@ class DashboardComponent extends React.Component
          title:null,
          id:null,
          modal:null,
+         color:'#FFFF88',
       
 
       //To get the data from the database
        firebaseGetItems:[{
            id:null,
            title:null,
-           content:null
+           content:null,
+           color:'#FFFF88'
        }]
     
    
@@ -98,6 +100,7 @@ class DashboardComponent extends React.Component
             const notes = {
                body:this.state.content,
                 title:this.state.title,
+                color:this.state.color,
                 timestamp:firebase.firestore.FieldValue.serverTimestamp()
             }
             
@@ -113,7 +116,8 @@ class DashboardComponent extends React.Component
             this.setState({firebaseGetItems:[{
                 'id':this.state.id,
                 'title':this.state.title,
-                'content':this.state.content
+                'content':this.state.content,
+                'color':this.state.color
             
             
             },...this.state.firebaseGetItems]})
@@ -173,6 +177,25 @@ class DashboardComponent extends React.Component
             this.setState({title:null})
             this.setState({content:null})
 
+        }
+
+        this.color = (color,id) =>
+        {
+            this.setState({color: color})
+            this.state.firebaseGetItems.forEach(i => {
+                if(i.id===id)
+                {
+                   i.color = color
+                }}
+                )
+
+            firebase
+            .firestore()
+            .collection('users')
+            .doc(this.state.email)
+            .collection('notes')
+            .doc(id)
+            .update({color:color})
         }
 
 
@@ -285,7 +308,7 @@ class DashboardComponent extends React.Component
                  this.state.firebaseGetItems.map((note)=>(
                      note.content?
                 
-                     <Note title={note.title} content={note.content} key={note.id} id={note.id} deleteItem = {this.onDelete} editItem ={this.editItem} /> 
+                     <Note title={note.title} color={note.color} content={note.content} key={note.id} id={note.id} deleteItem = {this.onDelete} editItem ={this.editItem} colors={this.color}/> 
                     
                     :
 
@@ -325,7 +348,7 @@ class DashboardComponent extends React.Component
             this.props.history.push('/')
 
             else{
-                this.setState({firebaseGetItems:[{'title':null,'content':null,'id':null}]})
+                this.setState({firebaseGetItems:[{'title':null,'content':null,'id':null,'color':null}]})
                
                const name   = await firebase
                                     .firestore()
@@ -361,7 +384,8 @@ class DashboardComponent extends React.Component
                     firebaseGetItems: [ ...this.state.firebaseGetItems, {
                         'title':doc.data().title,
                         'content': doc.data().body,
-                        'id': doc.id
+                        'id': doc.id,
+                        'color':doc.data().color
                     }],
                   });
                   
