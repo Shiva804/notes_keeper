@@ -12,7 +12,7 @@ import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
 import PaletteIcon from '@material-ui/icons/Palette';
 import  ColorSelector from './colorselector/color'
-
+import CloseSharpIcon from '@material-ui/icons/CloseSharp';
 
 function Note(props)
  {
@@ -20,10 +20,6 @@ function Note(props)
     const [open, setOpen] = React.useState(false);
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [placement,setPlacement]= React.useState()
-   // const [divcolor,setDivColor] = React.useState('blue')
-    const [color,setColor] = React.useState('#FFFF88')
-
-
     const [arrowref,setArrowRef]= React.useState()
       const colors = (newPlacement)=>(event)=>
       {
@@ -53,11 +49,6 @@ function Note(props)
              setOpen(false)
          }
 
-        const selectColor = () =>
-        {
-
-        }
-      
 
        const handleRef = node => {
            setArrowRef(node)
@@ -67,19 +58,11 @@ function Note(props)
        
        const changeColor = (color) =>
        {
-           setColor(color)
+           
            setOpen(false)
            props.colors(color,props.id)
        }
 
-      
-
-
-
-
-
-
-     
         return(
             
         <div id={props.id} className={classes.card}>
@@ -114,6 +97,8 @@ function Note(props)
            element: arrowref},flip: {enabled: false,},}} >
     
         <Paper className={classes.colors}>
+        <CloseSharpIcon className={classes.close} onClick={handleClose}/>
+        <div className={classes.cc}>
         < ColorSelector color='#7AFCFF' key='1' id='1'  changeColor={changeColor}/>
         < ColorSelector color='#FF7EB9' key='2' id='2' changeColor={changeColor}/>
         < ColorSelector color='#FFFF88' key='3' id='3' changeColor={changeColor}/>
@@ -122,6 +107,7 @@ function Note(props)
         < ColorSelector color='#F24E4E' key='6' id='6' changeColor={changeColor}/>
         < ColorSelector color='#F3D5BD' key='7' id='7' changeColor={changeColor}/>
         < ColorSelector color='#FF9A54' key='8' id='8'  changeColor={changeColor}/>
+        </div>
 
 
 

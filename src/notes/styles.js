@@ -121,13 +121,29 @@ const useStyles = makeStyles({
 
     colors:
     {
-        height:'100px',
+        height:'130px',
         width:'160px',
+        border:'2px black solid',
+        borderRadius:'23px'
+    
+    },
+
+    close:
+    {
+        marginTop:'1px',
+        marginLeft:'125px',
+        '&:hover':{
+            transform:'scale(1.2)'
+        }
+
+    },
+
+    cc:
+    {
+        marginTop:'2px',
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
-        border:'2px black solid',
-        borderRadius:'23px'
     }
  
 
