@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/notes_keeper/static/css/main.f6a60c44.chunk.css",
+    "main.css": "/notes_keeper/static/css/main.c65c7a66.chunk.css",
     "main.js": "/notes_keeper/static/js/main.b24a8bb3.chunk.js",
     "main.js.map": "/notes_keeper/static/js/main.b24a8bb3.chunk.js.map",
     "runtime-main.js": "/notes_keeper/static/js/runtime-main.1008204e.js",
@@ -8,16 +8,16 @@
     "static/js/2.5810c892.chunk.js": "/notes_keeper/static/js/2.5810c892.chunk.js",
     "static/js/2.5810c892.chunk.js.map": "/notes_keeper/static/js/2.5810c892.chunk.js.map",
     "index.html": "/notes_keeper/index.html",
-    "precache-manifest.62403869b3cdcd4457aeb863afecdf6e.js": "/notes_keeper/precache-manifest.62403869b3cdcd4457aeb863afecdf6e.js",
+    "precache-manifest.906bda2bbcb189b2e90dac00a1be79f0.js": "/notes_keeper/precache-manifest.906bda2bbcb189b2e90dac00a1be79f0.js",
     "service-worker.js": "/notes_keeper/service-worker.js",
-    "static/css/main.f6a60c44.chunk.css.map": "/notes_keeper/static/css/main.f6a60c44.chunk.css.map",
+    "static/css/main.c65c7a66.chunk.css.map": "/notes_keeper/static/css/main.c65c7a66.chunk.css.map",
     "static/js/2.5810c892.chunk.js.LICENSE.txt": "/notes_keeper/static/js/2.5810c892.chunk.js.LICENSE.txt",
     "static/media/dashboard.css": "/notes_keeper/static/media/pawel-czerwinski-3-bDL0iRcbI-unsplash-1.2d49ce0e.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.1008204e.js",
     "static/js/2.5810c892.chunk.js",
-    "static/css/main.f6a60c44.chunk.css",
+    "static/css/main.c65c7a66.chunk.css",
     "static/js/main.b24a8bb3.chunk.js"
   ]
 }
