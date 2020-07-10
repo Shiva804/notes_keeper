@@ -85,7 +85,8 @@ h2{
   {
       #login
       {
-          width: 390px;
+          margin-top: 130px;
+          width: 370px;
           height: 380px;
 
       }
@@ -93,5 +94,15 @@ h2{
       {
           width:90px;
           height: 35px;
+      }
+
+      #email1
+      {
+          font-size: 17px;
+      }
+
+      #password1
+      {
+          font-size: 17px;
       }
   }
