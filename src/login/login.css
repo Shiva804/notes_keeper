@@ -80,3 +80,18 @@ h2{
       color: rgb(223, 94, 94);
   }
 
+
+  @media only screen and (max-width:450px)
+  {
+      #login
+      {
+          width: 390px;
+          height: 380px;
+
+      }
+      #log
+      {
+          width:90px;
+          height: 35px;
+      }
+  }

@@ -42,8 +42,7 @@ const useStyles = (theme) => ({
     {
         
         resize: 'none',
-        minHeight:'180px',
-        maxHeight: '300px',
+        height:'350px',
         width: '400px',
         paddingLeft: '20px',
         display: 'inline-block',

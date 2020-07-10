@@ -16,6 +16,8 @@
 {
     background-image: url('./pawel-czerwinski-3-bDL0iRcbI-unsplash-1.jpg');
     background-size: cover;
+    height: 100%;
+    width: 100%;
   
  
     
@@ -165,4 +167,53 @@ background-color: #dedede71;
 {
     display: flex;
     
+}
+
+
+@media only screen and (max-width:450px)
+{
+     #content
+    {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+     grid-template-rows: 20fr min-content;
+     margin-left: 30px;
+        
+    } 
+
+    #notes
+    {
+        height:150px;
+        width: 300px;
+    }
+    
+    #title
+    {
+        width: 300px;
+    }
+
+    #namess
+    {
+        margin-left: 50px;
+        font-size: 20px;
+    }
+    h3
+    {
+        font-size: 25px;
+    }
+    #nn
+    {
+        display: flex;
+        flex-direction:column;
+        margin-top: -17px;
+        margin-left: -50px;
+    }
+
+    #logout
+    {
+        width: 90px;
+        height: 35px;
+        margin-left: 40px;
+        margin-right: 30px;
+    }
 }

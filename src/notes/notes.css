@@ -1,0 +1,164 @@
+ #roots
+ {
+    min-width:160px;
+    max-width:300px;
+    height:fit-content;
+    margin-right:30;
+    border:5px white solid;
+    border-radius:23px;
+    outline:none;
+ }
+
+ #cards
+ {
+    margin-bottom: 10px;
+    margin-top:30px;
+    outline:none;
+    margin-left: 30px;
+
+}
+#cards:hover
+{
+    transform: scale(1.1);
+    
+}
+
+#contents
+{
+   min-height:fit-content;
+   max-height:300px;
+   overflow-y:hidden;
+   overflow-x:hidden;
+   cursor:pointer;
+   outline:none
+   
+   
+   
+
+}
+#divs
+{
+  border:0.2px white solid
+}
+
+
+#Typographyy
+{
+    font-size:17px;
+    color:black;
+    outline:none
+}
+
+#fabs
+{
+
+
+position:absolute;
+font-size:small;
+
+    
+ }
+#titles
+{
+   position:sticky;
+   font-size:14px;
+   color:black;
+   cursor:pointer;
+   outline:none
+   
+}
+
+#dels
+{
+
+
+   font-size:large;
+   
+   
+
+}
+
+#actions
+{
+   display:flex;
+   /* min-height:60px;
+   max-height:50px; */
+   height: fit-content;
+
+}
+
+
+#edits
+{
+   font-size:small
+}
+
+
+#editB
+{
+position:absolute;
+margin-left:60px;
+
+} 
+
+
+#logos
+{
+    height:50px;
+    position:absolute;
+    margin-top:-17px;
+    z-index:1;
+}
+
+#pals
+{
+    margin-left: 50px;
+}
+
+#colorss
+{
+    height:130px;
+    width:160px;
+    border:2px black solid;
+    border-radius:23px
+
+}
+
+#closes
+{
+    margin-top:1px;
+    margin-left:125px;
+  
+}
+
+#closes:hover
+{
+    transform:scale(1.2)
+}
+
+
+#cc
+{
+    margin-top:2px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+@media only screen and (max-width:1557px)
+{
+    #roots
+    {
+        max-width: 150px;
+        margin-left: 5px;
+        
+    }
+     
+    #cards
+    {
+        margin-left: 10px;
+    }
+
+}

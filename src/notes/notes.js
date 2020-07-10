@@ -2,7 +2,6 @@ import React from 'react'
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import useStyles from './styles'
 import CardHeader from '@material-ui/core/CardHeader';
 import Fab from '@material-ui/core/Fab';
 import DeleteOutlineRoundedIcon from '@material-ui/icons/DeleteOutlineRounded';
@@ -13,6 +12,7 @@ import Popper from '@material-ui/core/Popper';
 import PaletteIcon from '@material-ui/icons/Palette';
 import  ColorSelector from './colorselector/color'
 import CloseSharpIcon from '@material-ui/icons/CloseSharp';
+import './notes.css'
 
 function Note(props)
  {
@@ -30,7 +30,7 @@ function Note(props)
       }
   
        
-         const classes = useStyles()
+         
 
          const deleteCard = () => 
          {
@@ -65,40 +65,43 @@ function Note(props)
 
         return(
             
-        <div id={props.id} className={classes.card}>
+        <div id={props.id} id='cards'>
 
-       <img src = {logo} className={classes.logo}/>
-        <Card className={classes.root} variant='outlined' color='blue'  >
+       <img src = {logo} id='logos'/>
+        <Card id='roots' variant='outlined' color='blue'>
         
         
             
-          <CardHeader title ={props.title} className={classes.title} onClick={editCard} style={{backgroundColor:props.color}}/>
+          <CardHeader title ={props.title} id='titles' onClick={editCard} style={{backgroundColor:props.color}}/>
           
         
-            <CardContent className={classes.content} onClick={editCard} style={{backgroundColor:props.color}}>
+            <CardContent id='contents' onClick={editCard} style={{backgroundColor:props.color}}>
                  
-                <Typography variant="h2" component="p" className={classes.Typography}>
+                <Typography variant="h2" component="p" id='Typographyy'>
                     {props.content}
 
                 </Typography>
 
             </CardContent>
          
-           <CardActions disableSpacing className={classes.action}  style={{backgroundColor:props.color}}>    
+           <CardActions disableSpacing id='actions'  style={{backgroundColor:props.color}}>    
             
 
-            <Fab color='secondary'  className={classes.fab} onClick={deleteCard} size='small'>  <DeleteOutlineRoundedIcon className={classes.del}/></Fab>
+            <Fab color='secondary'  id='fabs' onClick={deleteCard} size='small'>  <DeleteOutlineRoundedIcon id='dels'/></Fab>
             
-            <Fab color='primary' size='small' className={classes.pal} onClick={colors('bottom-start')} ref={handleRef} ><PaletteIcon/></Fab>
+            <Fab color='primary' size='small' id='pals' onClick={colors('bottom-start')} ref={handleRef} ><PaletteIcon/></Fab>
             
             
     <Popper open={open}  anchorEl={anchorEl} placement={placement} modifiers={{  arrow: {
            enabled: true,
-           element: arrowref},flip: {enabled: false,},}} >
+           element: arrowref},flip: {enabled: true}, preventOverflow: {
+            enabled: true,
+            boundariesElement: 'scrollParent',
+          },}} >
     
-        <Paper className={classes.colors}>
-        <CloseSharpIcon className={classes.close} onClick={handleClose}/>
-        <div className={classes.cc}>
+        <Paper id='colorss'>
+        <CloseSharpIcon id='closes' onClick={handleClose}/>
+        <div id='cc'>
         < ColorSelector color='#7AFCFF' key='1' id='1'  changeColor={changeColor}/>
         < ColorSelector color='#FF7EB9' key='2' id='2' changeColor={changeColor}/>
         < ColorSelector color='#FFFF88' key='3' id='3' changeColor={changeColor}/>

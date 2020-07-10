@@ -279,7 +279,7 @@ class DashboardComponent extends React.Component
  
     <div id='dashboard' >
                
-                <header id='header'>
+            <header id='header'>
                 <h3>NOTES KEEPER</h3>
                <div id='nn'>
                 <h3 id='namess'>{this.state.name}</h3>

@@ -2,21 +2,22 @@ import { makeStyles } from '@material-ui/core';
 
 
 const useStyles = makeStyles({
-    root :{
-        minWidth:'160px',
-        maxWidth:'300px',
-        minHeight:'10px',
-        maxHeight:'fitcontent',
-        marginRight:30,
-        color:'white',
-        border:'5px white solid',
-        borderRadius:'23px',
-        outline:'none'
+    // root :{
+    //     minWidth:'160px',
+    //     maxWidth:'300px',
+    //     minHeight:'10px',
+    //     maxHeight:'fitcontent',
+    //     marginRight:30,
+    //     color:'white',
+    //     border:'5px white solid',
+    //     borderRadius:'23px',
+    //     outline:'none',
        
         
-    },
+    // },
     card:{
         transition: 'transform .2s',
+        marginTop:'30px',
         outline:'none',
         '&:hover':
         {
@@ -144,9 +145,9 @@ const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
-    }
- 
+    },
 
+    
 
 
 
