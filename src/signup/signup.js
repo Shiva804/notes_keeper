@@ -1,6 +1,9 @@
 import React from 'react'
 import './signup.css'
 import { Link } from 'react-router-dom'
+import logo1 from '../dashboard/Layer 1.png'
+import logo2 from '../dashboard/Layer 3.png'
+
 const firebase = require('firebase')
 class SignUpComponent extends React.Component
 {
@@ -99,7 +102,11 @@ class SignUpComponent extends React.Component
        } }
         return(
             <div className='container'>
-                <h1 id='nk'>Notes Keeper</h1>
+                <div>
+                <div id='img'>
+                <img src={logo1} id='logo-1'></img>
+                <h3>Picky Notes </h3>
+                </div>
                 <div className='login'>
                     <h2>Sign Up!</h2>
                     <form onSubmit={(e)=> this.submitSignUp(e)} id='signUp'>
@@ -123,7 +130,7 @@ class SignUpComponent extends React.Component
                 }
 
                 </div> 
-               
+               </div>
             </div>
         )
     }

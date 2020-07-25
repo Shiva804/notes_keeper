@@ -28,9 +28,7 @@ function Note(props)
         setOpen(true)
         
       }
-  
-       
-         
+
 
          const deleteCard = () => 
          {

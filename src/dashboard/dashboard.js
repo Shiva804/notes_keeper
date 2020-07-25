@@ -3,6 +3,8 @@ import './dashboard.css'
 import authenticate from '../auth'
 import Note from '../notes/notes'
 import EditItem from './editItem'
+import logo1 from './Layer 1.png'
+import logo2 from './Layer 3.png'
 
 const firebase = require('firebase')
 
@@ -280,7 +282,11 @@ class DashboardComponent extends React.Component
     <div id='dashboard' >
                
             <header id='header'>
-                <h3>NOTES KEEPER</h3>
+                <div id='imgs'>
+                <img src={logo1} id='logo1'></img>
+                <img src={logo2} id='logo2'></img>
+                </div>
+                
                <div id='nn'>
                 <h3 id='namess'>{this.state.name}</h3>
                

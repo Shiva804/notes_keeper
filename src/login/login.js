@@ -2,6 +2,8 @@ import React from 'react'
 import './login.css'
 import { Link } from 'react-router-dom'
 import auth from "../auth";
+import logo1 from '../dashboard/Layer 1.png'
+
 
 const firebase = require('firebase')
 
@@ -65,7 +67,11 @@ class LoginComponent extends React.Component
          
         return(
             <div id='container'>
-                <h1 id='nk'>Notes Keeper</h1>
+                {/* <h1 id='nk'>Notes Keeper</h1> */}
+                <div id='img'>
+                <img src={logo1} id='logo-1'></img>
+                <h3 >Picky Notes</h3>
+                </div>
                 <div id='login'>
 
                     <h2>Login!</h2>

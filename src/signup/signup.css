@@ -1,4 +1,5 @@
 /* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
 html
 {
@@ -12,12 +13,23 @@ html
     text-align: center;
     margin-top: 30px;
 }
+
+.container
+{
+    background-image: url('./top-view-photo-of-coffee-cup-on-yellow-surface-3803950.jpg');
+     background-size:cover;
+    overflow: hidden;
+    height: 100vh;
+    max-width: 100%;
+
+
+}
 .login
 {
     height: 400px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 150px;
+    margin-top: 50px;
     margin-bottom: auto;
     width: 500px;
     border: 1px #E9E9E9 outset;
@@ -26,11 +38,19 @@ html
     text-align: center;
     font-family: 'Noto Serif', serif;
     
-    box-shadow: #969695 2px 2px 1px;
+    box-shadow: #363636 5px 5px 2px;
     
 
 
 }
+h3
+  {
+      margin-top: 30px;
+      font-family: 'Fredericka the Great', cursive;
+      font-weight: bolder;
+      font-size: 60px;
+      color: rgb(231, 37, 37);
+  }
 
 
 
@@ -142,11 +162,11 @@ h2{
     color: rgb(223, 94, 94);
 }
 
-@media only screen and (max-width:450px)
+@media only screen and (max-width:500px)
 {
     .login
     {
-        margin-top: 130px;
+        margin-top: 90px;
         width: 370px;
         height: 380px;
     }
@@ -170,5 +190,19 @@ h2{
     #confirm_password
     {
         font-size: 16px;
+    }
+
+    .container
+    {
+        background-image: url('./ScreenShot_20200712182605.png');
+        background-size: cover;
+    }
+    h3
+    {
+        margin-top: 30px;
+        font-family: 'Fredericka the Great', cursive;
+        font-weight: bold;
+        font-size: 40px;
+        color: rgb(231, 37, 37);
     }
 }
