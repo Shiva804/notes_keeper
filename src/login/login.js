@@ -70,7 +70,7 @@ class LoginComponent extends React.Component
                 {/* <h1 id='nk'>Notes Keeper</h1> */}
                 <div id='img'>
                 <img src={logo1} id='logo-1'></img>
-                <h3 >Picky Notes</h3>
+                <h3 id='pick'>Picky Note</h3>
                 </div>
                 <div id='login'>
 

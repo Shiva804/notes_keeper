@@ -111,14 +111,16 @@ h2{
     
 
   }
-  h3
+  #pick
   {
       margin-top: 30px;
       font-family: 'Dancing Script', cursive;
       font-weight: bold;
-      font-size: 60px;
+      font-size: 70px;
       color: rgb(231, 37, 37);
   }
+
+
   @media only screen and (max-width:500px)
   {
       #login
@@ -150,7 +152,7 @@ h2{
           background-size: cover;
       }
 
-      h3
+      #pick
   {
       margin-top: 30px;
       font-family: 'Fredericka the Great', cursive;

@@ -105,7 +105,7 @@ class SignUpComponent extends React.Component
                 <div>
                 <div id='img'>
                 <img src={logo1} id='logo-1'></img>
-                <h3>Picky Notes </h3>
+                <h3 id='pick'>Picky Note </h3>
                 </div>
                 <div className='login'>
                     <h2>Sign Up!</h2>
