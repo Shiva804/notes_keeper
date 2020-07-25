@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/notes_keeper/static/css/main.6f4131b1.chunk.css",
-    "main.js": "/notes_keeper/static/js/main.b24a8bb3.chunk.js",
-    "main.js.map": "/notes_keeper/static/js/main.b24a8bb3.chunk.js.map",
+    "main.css": "/notes_keeper/static/css/main.b9cefba3.chunk.css",
+    "main.js": "/notes_keeper/static/js/main.ff8aa552.chunk.js",
+    "main.js.map": "/notes_keeper/static/js/main.ff8aa552.chunk.js.map",
     "runtime-main.js": "/notes_keeper/static/js/runtime-main.1008204e.js",
     "runtime-main.js.map": "/notes_keeper/static/js/runtime-main.1008204e.js.map",
-    "static/js/2.5810c892.chunk.js": "/notes_keeper/static/js/2.5810c892.chunk.js",
-    "static/js/2.5810c892.chunk.js.map": "/notes_keeper/static/js/2.5810c892.chunk.js.map",
+    "static/js/2.2aa69263.chunk.js": "/notes_keeper/static/js/2.2aa69263.chunk.js",
+    "static/js/2.2aa69263.chunk.js.map": "/notes_keeper/static/js/2.2aa69263.chunk.js.map",
     "index.html": "/notes_keeper/index.html",
-    "precache-manifest.1a47ccc70b45b8a6558ec50414e0b28e.js": "/notes_keeper/precache-manifest.1a47ccc70b45b8a6558ec50414e0b28e.js",
+    "precache-manifest.c77bed3b8cc1b6a2570ec45e4e9667c8.js": "/notes_keeper/precache-manifest.c77bed3b8cc1b6a2570ec45e4e9667c8.js",
     "service-worker.js": "/notes_keeper/service-worker.js",
-    "static/css/main.6f4131b1.chunk.css.map": "/notes_keeper/static/css/main.6f4131b1.chunk.css.map",
-    "static/js/2.5810c892.chunk.js.LICENSE.txt": "/notes_keeper/static/js/2.5810c892.chunk.js.LICENSE.txt",
+    "static/css/main.b9cefba3.chunk.css.map": "/notes_keeper/static/css/main.b9cefba3.chunk.css.map",
+    "static/js/2.2aa69263.chunk.js.LICENSE.txt": "/notes_keeper/static/js/2.2aa69263.chunk.js.LICENSE.txt",
+    "static/media/Layer 1.png": "/notes_keeper/static/media/Layer 1.b6ebc673.png",
+    "static/media/Layer 3.png": "/notes_keeper/static/media/Layer 3.f728e12c.png",
+    "static/media/signup.css": "/notes_keeper/static/media/top-view-photo-of-coffee-cup-on-yellow-surface-3803950.36893200.jpg",
     "static/media/dashboard.css": "/notes_keeper/static/media/pawel-czerwinski-3-bDL0iRcbI-unsplash-1.2d49ce0e.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.1008204e.js",
-    "static/js/2.5810c892.chunk.js",
-    "static/css/main.6f4131b1.chunk.css",
-    "static/js/main.b24a8bb3.chunk.js"
+    "static/js/2.2aa69263.chunk.js",
+    "static/css/main.b9cefba3.chunk.css",
+    "static/js/main.ff8aa552.chunk.js"
   ]
 }
